@@ -14,4 +14,15 @@ Anyways, here I decided to go back to the original plan, the standard 4 wheel de
 
 So now I've begun laying out the schematic for the circuit on TinkerCAD. I was hoping to control the vehicle wirelessly, but my only options are an analog joystick which must be wired, or this IR Remote. I chose the IR Remote, and while everything is functional at the moment, there is one issue. The issue is that the IR Remote does not transmit a signal once an input is released, therefore my car will continue moving in the last inputted direction without ever coming to a stop. 
 
-Simple solution would be to add a few buttons to control speed of the car, or a brake, or I could code a timeout function that would automatically bring the car to a rolling stop if an input hasn't been clicked in a while. I'll play around with this and update this when I do, till then. # arduino_car
+Simple solution would be to add a few buttons to control speed of the car, or a brake, or I could code a timeout function that would automatically bring the car to a rolling stop if an input hasn't been clicked in a while. I'll play around with this and update this when I do, till then.
+
+##
+
+So now I've got the prototype layed out on the UNO and it appears there are a few issues. First issue is that it appears the Arduino isn't receiving enough power via the 5v Vin pin. I've remedied this using a separate 9v battery to power the arduino separately which I will attach to the same switch in the near future.
+
+The second issue is that the 4th motor is not working. I've implemented a simple program to run all the motors once the switch is enabled, this lost one remains stationary. I imagine this to be due to a poor soldering connection to the motor terminals, or misplaced/loose jumper cables. 
+
+The final and main issue is the IR sensor/remote not working. I suspect it is due to the code being from a newer library which I will likely have to downgrade to the older IR Remote 2.0 library.
+
+
+ 
